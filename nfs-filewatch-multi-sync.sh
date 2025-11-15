@@ -10,13 +10,13 @@ POLLING_INTERVAL=30
 function print_help {
     echo "You need to supply all the arguments"
     echo "  --help|-h                Print this help message."
-    echo "  --dormant-threshold      Time to consider file to be dormant / not modified for x minute ago. Default 2 minutes"
-    echo "  --delete-source-file     Delete source file after complete. Default is 1"
-    echo "  --parallel-jobs          Number of parallel jobs"
+    echo "  --dormant-threshold      Time to consider file to be dormant / not modified for x minute ago. Default $DORMANT_THRESHOLD minutes"
+    echo "  --delete-source-file     Delete source file after complete. Default is $DELETE_SOURCE_FILE"
+    echo "  --parallel-jobs          Number of parallel jobs. Default is $PARALLEL_JOBS"
     echo "  --watch-folder-fromfile  Path to file contains folders to watch"
     echo "  --dest-folder-fromfile   Path to file of contains folders to output"
-    echo "  --ignore-hidden-and-partial-file    Ignore (.) hidden files (rsync partial) and .part file (ftp partial). Default is 1"
-    echo "  --polling-interval       Interval between each poll. Default 30 seconds"
+    echo "  --ignore-hidden-and-partial-file    Ignore (.) hidden files (rsync partial) and .part file (ftp partial). Default is $IGNORE_HIDDEN_AND_PARTIAL"
+    echo "  --polling-interval       Interval between each poll. Default $POLLING_INTERVAL seconds"
 }
 
 if [ $# -eq 0 ]; then
